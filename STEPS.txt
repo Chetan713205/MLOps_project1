@@ -1,0 +1,64 @@
+1. In GCP make a bucket and upload your dataset file
+
+2. Firstly create following folder: 
+           * artifacts
+           * config                __init__.py                The blueprint/settings       # for importing function to other .py files / making a package 
+           * notebook
+           * src                   __init__.py                Your app’s main engine
+           * static
+           * template
+           * utils                 __init__.py                The toolbox or helpers
+           - requirements.txt
+           - setup.py              pip install -e .                                         # for other to run the command & install all the relevant dependencies
+
+3. Dir/: src -> logger.py
+
+4. Dir/: src -> custom_exception.py                        # To raise detailed exceptions with extra context (line number, file name)
+
+5. Data ingestion -> Need to upload data from GCP to VS Code -> Service Account is used -> Grants restricted access of GCP
+	* Install Google Cloud CLI
+	* run to command to check proprt installation: gcloud --version 
+	* create data_injestion.py in Dir/:src
+	* GCP -> IAM & Admin -> Service account -> Creat Service account -> grant full accessaccessof buckets (Storage Admin)
+	* My bucket -> 3 dot -> Edit access -> Enter the service acc name, access details
+	* Serive Account -> Manage keys -> Create new key > Json
+	* in CMD of VSCode : (myenv) D:\ML-Ops\1. Hotel Reservation prediction>set GOOGLE_APPLICATION_CREDENTIALS=D:\ML-Ops\1. Hotel Reservation prediction\gen-lang-client-0389229415-b3343bcf0f8b.json
+          ### This will grant access to VSCode
+	* VSCode Dir/:config -> config.yaml -> enter the bucket name and details
+	* Dir/:config -> paths_config.py  -> assign path to dataset, test, train data, .yaml file
+	* Dir/:utils -> common_functions.py -> define a function to read .yaml file
+	* Dir/:src -> data_ingestion.py -> to download the raw, test, train data from server to local system
+
+6. Notebook
+	* ipnbykernel for jupyter notebook
+	* Dir/: notebook -> notebook.ipnby
+	* Perforn data preprocessing, EDA, FE and Model Training
+	* Save the trained model in .pkl file 
+
+7. Data processing
+	* Dir/:utils -> common_functions.py -> add a function to read csv files
+	* Dir/:config -> paths_config.py  -> add processed csv file storage path 
+	* Dir/:config -> config.yaml -> add numerical and categorical variables in data preprocessing 
+	* Dir/:src -> data_preprocessing.py -> 
+		- Update all the num and cat var. in config.yaml file, assign skewness threshold and no. of features
+		- in path_config.py assign dir and file path for processed train and test data 
+		- Repeat all the steps whatever was done in notebook in data_preprocessing and run the script to generate the processed data
+
+8. Model training
+	* Dir/:config -> paths_config.py  -> add the path where model needs to be stored
+	* Dir/:config -> create model_params.py  -> add the model parameters and hyperparameter tuning parameters
+	* Dir/:src -> create model_training.py -> Model training class include load and split data, train model, model evaluation, save model and run model methods
+	* Why ML-FLOW -> The problem is that if i run again model_training.py then the previous model will get overwrite
+	* Cmd for MLFROW interface:   mlflow ui
+	* During experiment if you make modification in data set that particular dataset will also be getting stored on mlflow cloud interface
+
+9. Pipeline
+	* Create direcrory pipeline
+	* Dir/:pipeline -> training_pipeline.py -> create __init__.py to use it as a package -> pip install -e . -> will treart as package
+	* Call all your data ingestion, data preprocessing and model training classes and functions in the pipeline and run
+
+10. Data Versioning & Code Versioning
+	* Download Git Cli and install, to check proper nstallation: -> git --version
+	* 
+
+	

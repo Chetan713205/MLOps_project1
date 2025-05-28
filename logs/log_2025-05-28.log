@@ -1,0 +1,70 @@
+[2025-05-28 09:59:49,240] INFO - Sucessfully read the .yaml file
+[2025-05-28 09:59:49,253] INFO - Data ingestion started with bucket: my_bucket2524 and file: Hotel_Reservations.csv
+[2025-05-28 09:59:49,254] INFO - Starting data ingestion process
+[2025-05-28 10:00:01,360] ERROR - Error downloading file from GCP: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+[2025-05-28 10:00:01,361] ERROR - Error in data ingestion process: Error occurred in script: [D:\ML-Ops\1. Hotel Reservation prediction\src\data_ingestion.py] at line number: [25] with message: [Error downloading file from GCP: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.]
+[2025-05-28 10:00:01,362] INFO - Data ingestion process finished
+[2025-05-28 10:07:02,611] INFO - Sucessfully read the .yaml file
+[2025-05-28 10:07:02,611] INFO - Data ingestion started with bucket: my_bucket2524 and file: Hotel_Reservations.csv
+[2025-05-28 10:07:02,611] INFO - Starting data ingestion process
+[2025-05-28 10:07:06,055] INFO - File downloaded from GCP bucket: my_bucket2524 to local path: artifacts/raw\raw_data.csv
+[2025-05-28 10:07:06,477] INFO - Data loaded from artifacts/raw\raw_data.csv with shape: (36275, 19)
+[2025-05-28 10:07:06,593] INFO - Data split into train and test sets with shapes: (29020, 19), (7255, 19)
+[2025-05-28 10:07:06,997] INFO - Train data saved to artifacts/raw\train_data.csv and test data saved to artifacts/raw\test_data.csv
+[2025-05-28 10:07:07,002] INFO - Data ingestion process completed successfully
+[2025-05-28 10:07:07,002] INFO - Data ingestion process finished
+[2025-05-28 10:07:07,006] INFO - Sucessfully read the .yaml file
+[2025-05-28 10:07:07,006] INFO - Loading data from raw directory
+[2025-05-28 10:07:07,006] INFO - Loading data from artifacts/raw\train_data.csv
+[2025-05-28 10:07:07,123] INFO - Loading data from artifacts/raw\test_data.csv
+[2025-05-28 10:07:07,165] INFO - Starting data preprocessing
+[2025-05-28 10:07:07,165] INFO - Dropping the unnecessary columns and deleting duplicates
+[2025-05-28 10:07:07,299] INFO - Applying Label Encoding to categorical features: ['type_of_meal_plan', 'required_car_parking_space', 'room_type_reserved', 'market_segment_type', 'repeated_guest', 'booking_status']
+[2025-05-28 10:07:07,390] INFO - Label Encoding mappings are:
+[2025-05-28 10:07:07,391] INFO - type_of_meal_plan : {'Meal Plan 1': np.int64(0), 'Meal Plan 2': np.int64(1), 'Meal Plan 3': np.int64(2), 'Not Selected': np.int64(3)}
+[2025-05-28 10:07:07,391] INFO - required_car_parking_space : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+[2025-05-28 10:07:07,391] INFO - room_type_reserved : {'Room_Type 1': np.int64(0), 'Room_Type 2': np.int64(1), 'Room_Type 3': np.int64(2), 'Room_Type 4': np.int64(3), 'Room_Type 5': np.int64(4), 'Room_Type 6': np.int64(5), 'Room_Type 7': np.int64(6)}
+[2025-05-28 10:07:07,392] INFO - market_segment_type : {'Aviation': np.int64(0), 'Complementary': np.int64(1), 'Corporate': np.int64(2), 'Offline': np.int64(3), 'Online': np.int64(4)}
+[2025-05-28 10:07:07,392] INFO - repeated_guest : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+[2025-05-28 10:07:07,392] INFO - booking_status : {'Canceled': np.int64(0), 'Not_Canceled': np.int64(1)}
+[2025-05-28 10:07:07,392] INFO - Handling Skewness
+[2025-05-28 10:07:07,409] INFO - Starting data preprocessing
+[2025-05-28 10:07:07,409] INFO - Dropping the unnecessary columns and deleting duplicates
+[2025-05-28 10:07:07,428] INFO - Applying Label Encoding to categorical features: ['type_of_meal_plan', 'required_car_parking_space', 'room_type_reserved', 'market_segment_type', 'repeated_guest', 'booking_status']
+[2025-05-28 10:07:07,440] INFO - Label Encoding mappings are:
+[2025-05-28 10:07:07,441] INFO - type_of_meal_plan : {'Meal Plan 1': np.int64(0), 'Meal Plan 2': np.int64(1), 'Meal Plan 3': np.int64(2), 'Not Selected': np.int64(3)}
+[2025-05-28 10:07:07,441] INFO - required_car_parking_space : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+[2025-05-28 10:07:07,441] INFO - room_type_reserved : {'Room_Type 1': np.int64(0), 'Room_Type 2': np.int64(1), 'Room_Type 3': np.int64(2), 'Room_Type 4': np.int64(3), 'Room_Type 5': np.int64(4), 'Room_Type 6': np.int64(5), 'Room_Type 7': np.int64(6)}
+[2025-05-28 10:07:07,441] INFO - market_segment_type : {'Aviation': np.int64(0), 'Complementary': np.int64(1), 'Corporate': np.int64(2), 'Offline': np.int64(3), 'Online': np.int64(4)}
+[2025-05-28 10:07:07,441] INFO - repeated_guest : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+[2025-05-28 10:07:07,441] INFO - booking_status : {'Canceled': np.int64(0), 'Not_Canceled': np.int64(1)}
+[2025-05-28 10:07:07,441] INFO - Handling Skewness
+[2025-05-28 10:07:07,446] INFO - Balancing the data using SMOTE
+[2025-05-28 10:07:13,818] INFO - Data balancing completed
+[2025-05-28 10:07:13,819] INFO - Selecting features using Random Forest
+[2025-05-28 10:07:20,916] INFO - Features selected: ['lead_time' 'no_of_special_requests' 'avg_price_per_room' 'arrival_month'
+ 'arrival_date' 'market_segment_type' 'no_of_week_nights'
+ 'no_of_weekend_nights' 'room_type_reserved' 'type_of_meal_plan']
+[2025-05-28 10:07:20,935] INFO - Saving processed data to artifacts/processed\processed_train.csv
+[2025-05-28 10:07:21,079] INFO - Data saved successfully
+[2025-05-28 10:07:21,079] INFO - Saving processed data to artifacts/processed\processed_test.csv
+[2025-05-28 10:07:21,107] INFO - Data saved successfully
+[2025-05-28 10:07:21,107] INFO - Data processing completed successfully
+[2025-05-28 10:07:23,694] INFO - Starting ML-FLOW experimentation
+[2025-05-28 10:07:23,694] INFO - Logging the train and test daata to ML-FLOW
+[2025-05-28 10:07:23,706] INFO - Loading training data from artifacts/processed\processed_train.csv
+[2025-05-28 10:07:23,706] INFO - Loading data from artifacts/processed\processed_train.csv
+[2025-05-28 10:07:23,763] INFO - Loading test data from artifacts/processed\processed_test.csv
+[2025-05-28 10:07:23,763] INFO - Loading data from artifacts/processed\processed_test.csv
+[2025-05-28 10:07:23,803] INFO - Data loaded successfully with shapes: X_train: (30462, 10), y_train: (30462,), X_test: (6047, 10), y_test: (6047,)
+[2025-05-28 10:07:23,803] INFO - Starting LightGBM model training
+[2025-05-28 10:07:23,803] INFO - Setting up RandomizedSearchCV for hyperparameter tuning
+[2025-05-28 10:07:23,803] INFO - Starting our Hyperparameter tuning
+[2025-05-28 10:07:53,330] INFO - Model training completed successfully
+[2025-05-28 10:07:53,331] INFO - Best parameters found: {'boosting_type': 'gbdt', 'learning_rate': np.float64(0.1293700315892974), 'max_depth': 23, 'n_estimators': 314, 'num_leaves': 94}
+[2025-05-28 10:07:53,331] INFO - Evaluating the trained model
+[2025-05-28 10:07:53,541] INFO - Model evaluation metrics - Accuracy: 0.8706796758723334, F1 Score: 0.8712879617967523, Precision: 0.8721109888249624, Recall: 0.8706796758723334
+[2025-05-28 10:07:53,775] INFO - Model saved successfully
+[2025-05-28 10:07:53,775] INFO - Logging the model to ML-FLOW
+[2025-05-28 10:07:53,780] INFO - Logging model parameters and metrics to ML-FLOW
+[2025-05-28 10:07:53,845] INFO - Model training and evaluation completed successfully with metrics: {'accuracy': 0.8706796758723334, 'f1 score': 0.8712879617967523, 'precision': 0.8721109888249624, 'recall': 0.8706796758723334}

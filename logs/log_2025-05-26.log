@@ -1,0 +1,39 @@
+[2025-05-26 13:42:33,007] INFO - Sucessfully read the .yaml file
+[2025-05-26 13:42:33,008] INFO - Created directory: artifacts/processed
+[2025-05-26 13:42:33,009] INFO - Loading data from raw directory
+[2025-05-26 13:42:33,009] INFO - Loading data from artifacts/raw\train_data.csv
+[2025-05-26 13:42:33,216] INFO - Loading data from artifacts/raw\test_data.csv
+[2025-05-26 13:42:33,266] INFO - Starting data preprocessing
+[2025-05-26 13:42:33,266] INFO - Dropping the unnecessary columns and deleting duplicates
+[2025-05-26 13:42:33,398] INFO - Applying Label Encoding to categorical features: ['type_of_meal_plan', 'required_car_parking_space', 'room_type_reserved', 'market_segment_type', 'repeated_guest', 'booking_status']
+[2025-05-26 13:42:33,451] INFO - Label Encoding mappings are:
+[2025-05-26 13:42:33,452] INFO - type_of_meal_plan : {'Meal Plan 1': np.int64(0), 'Meal Plan 2': np.int64(1), 'Meal Plan 3': np.int64(2), 'Not Selected': np.int64(3)}
+[2025-05-26 13:42:33,452] INFO - required_car_parking_space : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+[2025-05-26 13:42:33,452] INFO - room_type_reserved : {'Room_Type 1': np.int64(0), 'Room_Type 2': np.int64(1), 'Room_Type 3': np.int64(2), 'Room_Type 4': np.int64(3), 'Room_Type 5': np.int64(4), 'Room_Type 6': np.int64(5), 'Room_Type 7': np.int64(6)}
+[2025-05-26 13:42:33,452] INFO - market_segment_type : {'Aviation': np.int64(0), 'Complementary': np.int64(1), 'Corporate': np.int64(2), 'Offline': np.int64(3), 'Online': np.int64(4)}
+[2025-05-26 13:42:33,452] INFO - repeated_guest : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+[2025-05-26 13:42:33,452] INFO - booking_status : {'Canceled': np.int64(0), 'Not_Canceled': np.int64(1)}
+[2025-05-26 13:42:33,452] INFO - Handling Skewness
+[2025-05-26 13:42:33,465] INFO - Starting data preprocessing
+[2025-05-26 13:42:33,466] INFO - Dropping the unnecessary columns and deleting duplicates
+[2025-05-26 13:42:33,480] INFO - Applying Label Encoding to categorical features: ['type_of_meal_plan', 'required_car_parking_space', 'room_type_reserved', 'market_segment_type', 'repeated_guest', 'booking_status']
+[2025-05-26 13:42:33,494] INFO - Label Encoding mappings are:
+[2025-05-26 13:42:33,495] INFO - type_of_meal_plan : {'Meal Plan 1': np.int64(0), 'Meal Plan 2': np.int64(1), 'Meal Plan 3': np.int64(2), 'Not Selected': np.int64(3)}
+[2025-05-26 13:42:33,495] INFO - required_car_parking_space : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+[2025-05-26 13:42:33,495] INFO - room_type_reserved : {'Room_Type 1': np.int64(0), 'Room_Type 2': np.int64(1), 'Room_Type 3': np.int64(2), 'Room_Type 4': np.int64(3), 'Room_Type 5': np.int64(4), 'Room_Type 6': np.int64(5), 'Room_Type 7': np.int64(6)}
+[2025-05-26 13:42:33,495] INFO - market_segment_type : {'Aviation': np.int64(0), 'Complementary': np.int64(1), 'Corporate': np.int64(2), 'Offline': np.int64(3), 'Online': np.int64(4)}
+[2025-05-26 13:42:33,495] INFO - repeated_guest : {np.int64(0): np.int64(0), np.int64(1): np.int64(1)}
+[2025-05-26 13:42:33,495] INFO - booking_status : {'Canceled': np.int64(0), 'Not_Canceled': np.int64(1)}
+[2025-05-26 13:42:33,495] INFO - Handling Skewness
+[2025-05-26 13:42:33,501] INFO - Balancing the data using SMOTE
+[2025-05-26 13:42:40,069] INFO - Data balancing completed
+[2025-05-26 13:42:40,070] INFO - Selecting features using Random Forest
+[2025-05-26 13:42:48,664] INFO - Features selected: ['lead_time' 'no_of_special_requests' 'avg_price_per_room' 'arrival_month'
+ 'arrival_date' 'market_segment_type' 'no_of_week_nights'
+ 'no_of_weekend_nights' 'room_type_reserved' 'type_of_meal_plan']
+[2025-05-26 13:42:48,689] INFO - Saving processed data to artifacts/processed\processed_train.csv
+[2025-05-26 13:42:49,005] INFO - Data saved successfully
+[2025-05-26 13:42:49,005] INFO - Saving processed data to artifacts/processed\processed_test.csv
+[2025-05-26 13:42:49,044] INFO - Data saved successfully
+[2025-05-26 13:42:49,044] INFO - Data processing completed successfully
+[2025-05-26 13:42:49,045] INFO - Data preprocessing script executed successfully

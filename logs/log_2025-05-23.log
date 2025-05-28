@@ -1,0 +1,3 @@
+[2025-05-23 19:21:39,280] INFO - Starting the division process
+[2025-05-23 19:21:39,280] ERROR - Error occurred while dividing numbers
+[2025-05-23 19:21:39,282] ERROR - Error occurred in script: [D:\ML-Ops\1. Hotel Reservation prediction\test_log_exp.py] at line number: [9] with message: [Custom error zero]

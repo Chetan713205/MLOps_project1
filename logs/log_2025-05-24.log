@@ -1,0 +1,37 @@
+[2025-05-24 21:07:52,918] ERROR - Error occured during reading of .yaml file
+[2025-05-24 21:14:13,760] INFO - Sucessfully read the .yaml file
+[2025-05-24 21:14:13,760] INFO - Data ingestion started with bucket: my_bucket2524 and file: Hotel_Reservations.csv
+[2025-05-24 21:14:13,761] INFO - Starting data ingestion process
+[2025-05-24 21:14:25,992] ERROR - Error downloading file from GCP: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+[2025-05-24 21:14:25,992] ERROR - Error in data ingestion process: Error occurred in script: [D:\ML-Ops\1. Hotel Reservation prediction\src\data_ingestion.py] at line number: [25] with message: [Error downloading file from GCP: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.]
+[2025-05-24 21:14:25,994] INFO - Data ingestion process finished
+[2025-05-24 21:22:08,461] INFO - Sucessfully read the .yaml file
+[2025-05-24 21:22:08,463] INFO - Data ingestion started with bucket: my_bucket2524 and file: Hotel_Reservations.csv
+[2025-05-24 21:22:08,463] INFO - Starting data ingestion process
+[2025-05-24 21:22:08,474] ERROR - Error downloading file from GCP: File "D:\ML-Ops\1. Hotel Reservation prediction\gen-lang-client-0389229415-b3343bcf0f8b.json" was not found.
+[2025-05-24 21:22:08,474] ERROR - Error in data ingestion process: Error occurred in script: [D:\ML-Ops\1. Hotel Reservation prediction\src\data_ingestion.py] at line number: [25] with message: [Error downloading file from GCP: File "D:\ML-Ops\1. Hotel Reservation prediction\gen-lang-client-0389229415-b3343bcf0f8b.json" was not found.]
+[2025-05-24 21:22:08,475] INFO - Data ingestion process finished
+[2025-05-24 21:25:29,792] INFO - Sucessfully read the .yaml file
+[2025-05-24 21:25:29,792] INFO - Data ingestion started with bucket: my_bucket2524 and file: Hotel_Reservations.csv
+[2025-05-24 21:25:29,792] INFO - Starting data ingestion process
+[2025-05-24 21:25:33,464] INFO - File downloaded from GCP bucket: my_bucket2524 to local path: artifacts/raw\raw_data.csv
+[2025-05-24 21:25:33,765] INFO - Data loaded from artifacts/raw\raw_data.csv with shape: (36275, 19)
+[2025-05-24 21:25:33,873] INFO - Data split into train and test sets with shapes: (29020, 19), (7255, 19)
+[2025-05-24 21:25:34,231] INFO - Train data saved to artifacts/raw\train_data.csv and test data saved to artifacts/raw\test_data.csv
+[2025-05-24 21:25:34,238] INFO - Data ingestion process completed successfully
+[2025-05-24 21:25:34,238] INFO - Data ingestion process finished
+[2025-05-24 21:28:51,649] INFO - Sucessfully read the .yaml file
+[2025-05-24 21:28:51,650] INFO - Data ingestion started with bucket: my_bucket2524 and file: Hotel_Reservations.csv
+[2025-05-24 21:28:51,650] INFO - Starting data ingestion process
+[2025-05-24 21:28:51,651] ERROR - Error downloading file from GCP: File "D:\ML-Ops\1. Hotel Reservation prediction\gen-lang-client-0389229415-b3343bcf0f8b.json" was not found.
+[2025-05-24 21:28:51,652] ERROR - Error in data ingestion process: Error occurred in script: [D:\ML-Ops\1. Hotel Reservation prediction\src\data_ingestion.py] at line number: [25] with message: [Error downloading file from GCP: File "D:\ML-Ops\1. Hotel Reservation prediction\gen-lang-client-0389229415-b3343bcf0f8b.json" was not found.]
+[2025-05-24 21:28:51,652] INFO - Data ingestion process finished
+[2025-05-24 21:35:39,606] INFO - Sucessfully read the .yaml file
+[2025-05-24 21:35:39,607] INFO - Data ingestion started with bucket: my_bucket2524 and file: Hotel_Reservations.csv
+[2025-05-24 21:35:39,607] INFO - Starting data ingestion process
+[2025-05-24 21:35:42,784] INFO - File downloaded from GCP bucket: my_bucket2524 to local path: artifacts/raw\raw_data.csv
+[2025-05-24 21:35:42,972] INFO - Data loaded from artifacts/raw\raw_data.csv with shape: (36275, 19)
+[2025-05-24 21:35:42,986] INFO - Data split into train and test sets with shapes: (29020, 19), (7255, 19)
+[2025-05-24 21:35:43,318] INFO - Train data saved to artifacts/raw\train_data.csv and test data saved to artifacts/raw\test_data.csv
+[2025-05-24 21:35:43,323] INFO - Data ingestion process completed successfully
+[2025-05-24 21:35:43,323] INFO - Data ingestion process finished
