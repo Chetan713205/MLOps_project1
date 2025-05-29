@@ -59,6 +59,28 @@
 
 10. Data Versioning & Code Versioning
 	* Download Git Cli and install, to check proper nstallation: -> git --version
-	* 
-
-	
+	* Create Github repository & do not add readme
+	**************** WARNING WHILE TRANSPORTING DO NOT INCLUDE ANY API KEY OR .json CREDENTIALS ****************
+	* git init, git branch -M main, git remote add origin https://github.com/Chetan713205/MLOPS_project1.git
+	* git commit -m "COMMIT", git config --global user.name "Chetan Tiwari", git config --global user.email "chetantiwaridgp5@gmail.com"
+	* git commit -m "COMMIT", git push origin main
+	* ADVANTAGE: only if a modification is done to the code or dataset then only the repository will be getting updated with only the modification otherwhise not
+ 
+11. Frontend
+	* Dir/:templates -> index.html -> Create html frontend 
+	* FLASK APP -> application.py -> link your model,pilk and html and the script
+	* For better UI in Dir/:static -> style.css -> use chatGPT to create css script giving it the html file, link the css script with html file assigning css path on html file -> run the application.py
+ 
+12. CI-CD (Continous integration -- Continous Deployment) using Jenkins
+	* Project <--------> GitHub <--------> Cloud
+	* First to create Docker container of Jenkins and inside that Container Project needs to be stored --> "DinD" --> Docker in Docker
+	* Integration of GitHub Code with Jenkins Pipeline
+	* Dockerization of project
+	* Create myenv in Jenkins
+	* Build a Docker Image of your project
+	* Push the image to GCR (Google Cloud Registry)
+	* Extract image from GCR and push to --> Google Cloud Run --> Program deployed on cloud
+	--------------------------------------------------------------------------------------------------------------------------------------
+	* Install Docker Desktop --> keep it running on desktop background
+	* Ce folder --> custom_jenkins
+	* Dir/:custom_jenkins --> Dockerfile
