@@ -17,9 +17,9 @@
 
 5. Data ingestion -> Need to upload data from GCP to VS Code -> Service Account is used -> Grants restricted access of GCP
 	* Install Google Cloud CLI
-	* run to command to check proprt installation: gcloud --version 
+	* run command to check proprt installation: gcloud --version 
 	* create data_injestion.py in Dir/:src
-	* GCP -> IAM & Admin -> Service account -> Creat Service account -> grant full accessaccessof buckets (Storage Admin)
+	* GCP -> IAM & Admin -> Service account -> Creat Service account -> grant full accessaccess of buckets (Storage Admin)
 	* My bucket -> 3 dot -> Edit access -> Enter the service acc name, access details
 	* Serive Account -> Manage keys -> Create new key > Json
 	* in CMD of VSCode : (myenv) D:\ML-Ops\1. Hotel Reservation prediction>set GOOGLE_APPLICATION_CREDENTIALS=D:\ML-Ops\1. Hotel Reservation prediction\gen-lang-client-0389229415-b3343bcf0f8b.json
@@ -58,7 +58,7 @@
 	* Call all your data ingestion, data preprocessing and model training classes and functions in the pipeline and run
 
 10. Data Versioning & Code Versioning
-	* Download Git Cli and install, to check proper nstallation: -> git --version
+	* Download Git Cli and install, to check proper installation: -> git --version
 	* Create Github repository & do not add readme
 	**************** WARNING WHILE TRANSPORTING DO NOT INCLUDE ANY API KEY OR .json CREDENTIALS ****************
 	* git init, git branch -M main, git remote add origin https://github.com/Chetan713205/MLOPS_project1.git
