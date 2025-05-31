@@ -5,6 +5,7 @@ pipeline {
         VENV_DIR = 'venv'
         GCP_PROJECT = 'gen-lang-client-0389229415'
         GCLOUD_PATH = '/var/jenkins_home/google-cloud-sdk/bin'
+        DOCKER_BUILDKIT = '1'  // Add this line to enable BuildKit
     }
 
     stages {
@@ -46,7 +47,7 @@ pipeline {
                             gcloud config set project ${GCP_PROJECT}
                             gcloud auth configure-docker --quiet
 
-                            docker build -t gcr.io/${GCP_PROJECT}/ml-project:latest .
+                            DOCKER_BUILDKIT=1 docker build --secret id=gcp-key,src=${GOOGLE_APPLICATION_CREDENTIALS} -t gcr.io/${GCP_PROJECT}/ml-project:latest .
                             docker push gcr.io/${GCP_PROJECT}/ml-project:latest 
                         '''
                     }

@@ -20,8 +20,12 @@ COPY . .
 # Install the package in editable mode
 RUN pip install --no-cache-dir -e .
 
-# Train the model before running the application
-RUN python pipeline/training_pipeline.py
+
+
+# With this updated version:
+RUN --mount=type=secret,id=gcp-key \
+    GOOGLE_APPLICATION_CREDENTIALS=/run/secrets/gcp-key \
+    python pipeline/training_pipeline.py
 
 # Expose the port that Flask will run on
 EXPOSE 5000
